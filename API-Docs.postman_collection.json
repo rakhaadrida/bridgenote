@@ -1,0 +1,618 @@
+{
+	"info": {
+		"_postman_id": "62c6b2d8-d809-4c70-a9e9-2923cf7ce784",
+		"name": "Dokumentasi BridgeNote",
+		"description": "Dokumentasi API untuk register new account dan untuk CRUD table users dan user_detail",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{
+						"name": "Bagas",    
+						"email": "rakhaaab@gmail.com",    
+						"password": "Godenzonen29",    
+						"status": "ACTIVE",    
+						"position": "User"
+					}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://bridgenote.test/api/users/register",
+					"protocol": "http",
+					"host": [
+						"bridgenote",
+						"test"
+					],
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				},
+				"description": "API untuk menyimpan data user saat register account."
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    
+								"name": "Bagas",    
+								"email": "rakhaaa@gmail.com",    
+								"password": "Godenzonen",    
+								"status": "ACTIVE",    
+								"position": "User"
+							}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:11:11 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:11:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{    
+						"meta": {        
+							"code": 200,        
+							"status": "success",        
+							"message": null    
+						},    
+						"data": {        
+							"name": "Bagas",        
+							"email": "rakhaaa@gmail.com",        
+							"updated_at": "2021-06-22T07:11:10.000000Z",        
+							"created_at": "2021-06-22T07:11:10.000000Z",        
+							"id": 11    
+						}
+					}"
+				}
+			]
+		},
+
+		{
+			"name": "Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://bridgenote.test/api/users/show",
+					"protocol": "http",
+					"host": [
+						"bridgenote",
+						"test"
+					],
+					"path": [
+						"api",
+						"users",
+						"show"
+					]
+				},
+				"description": "API untuk mengambil data users beserta user_detail. API ini juga bisa dipanngil menggunakan parameter id, name, dan email. Limit data yang tampil dari API ini adalah 5 data."
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/show",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"show"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:14:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:14:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{    
+						"meta": {        
+							"code": 200,        
+							"status": "success",        
+							"message": "Data User Berhasil Diambil"    
+						},    
+						"data": {        
+							"current_page": 1,        
+							"data": [            
+								{  
+									"id": 1,  
+									"name": "Rakha",  
+									"email": "adrida@gmail.com", 
+									"email_verified_at": null,  
+									"created_at": "2021-06-21T14:00:07.000000Z",
+									"updated_at": "2021-06-21T14:00:07.000000Z",  
+									"details": {      
+										"user_id": 1,      
+										"status": "ACTIVE",      
+										"position": "User",      
+										"created_at": "2021-06-21T14:00:08.000000Z",      
+										"updated_at": "2021-06-21T14:00:08.000000Z"  
+									}            
+								},            
+								{  
+									"id": 2,  
+									"name": "Adrida",  
+									"email": "bagas@gmail.com",  
+									"email_verified_at": null,  
+									"created_at": "2021-06-21T14:00:56.000000Z",  
+									"updated_at": "2021-06-21T14:00:56.000000Z",  
+									"details": {      
+										"user_id": 2,      
+										"status": "ACTIVE",      
+										"position": "User",      
+										"created_at": "2021-06-21T14:00:56.000000Z",      
+										"updated_at": "2021-06-21T14:00:56.000000Z"  
+									}            
+								},      
+							],        
+						}
+					}"
+				},
+				{
+					"name": "With Parameter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/show?name=Bag",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"show"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Bag"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:17:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:17:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{    
+						"meta": {        
+							"code": 200,        
+							"status": "success",        
+							"message": "Data User Berhasil Diambil"    
+						},    
+						"data": {        
+							"current_page": 1,        
+							"data": [            
+								{  
+									"id": 3,  
+									"name": "Bagas",  
+									"email": "rakha@gmail.com",  
+									"email_verified_at": null,  
+									"created_at": "2021-06-21T14:03:34.000000Z",  
+									"updated_at": "2021-06-21T14:03:34.000000Z",  
+									"details": {      
+										"user_id": 3,      
+										"status": "ACTIVE",      
+										"position": "Super",      
+										"created_at": "2021-06-21T14:03:34.000000Z",      
+										"updated_at": "2021-06-21T14:03:34.000000Z"  
+									}            
+								}, 
+							],         
+						}
+					}"
+				}
+			]
+		},
+
+		{
+			"name": "Users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://bridgenote.test/api/users/destroy/13",
+					"protocol": "http",
+					"host": [
+						"bridgenote",
+						"test"
+					],
+					"path": [
+						"api",
+						"users",
+						"destroy",
+						"13"
+					]
+				},
+				"description": "API untuk menghapus data users beserta user_detail berdasarkan parameter id users"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users/destroy/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"destroy",
+								"11"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:21:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:21:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{    
+						"meta": {        
+							"code": 200,        
+							"status": "success",       
+							"message": "Data User Berhasil Dihapus"    
+						},    
+						"data": {        
+							"id": 11,        
+							"name": "Bagas",        
+							"email": "rakhaaa@gmail.com",        
+							"email_verified_at": null,        
+							"created_at": "2021-06-22T07:11:10.000000Z",        
+							"updated_at": "2021-06-22T07:11:10.000000Z"    
+						}
+					}"
+				}
+			]
+		},
+		
+		{
+			"name": "Users",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    
+						"name": "Bagaspati",    
+						"email": "rakhab@gmail.com",    
+						"password": "Godenzonen29",    
+						"status": "INACTIVE",    
+						"position": "Update"
+					}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://bridgenote.test/api/users/update/10",
+					"protocol": "http",
+					"host": [
+						"bridgenote",
+						"test"
+					],
+					"path": [
+						"api",
+						"users",
+						"update",
+						"10"
+					]
+				},
+				"description": "API untuk update data users beserta user_detail dengan parameter id user"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    
+								"name": "Bagaspati",    
+								"email": "rakhab@gmail.com",    
+								"password": "Godenzonen29",    
+								"status": "INACTIVE",    
+								"position": "Update"
+							}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/update/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"update",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:42:58 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Jun 2021 07:42:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{    
+						"meta": {        
+							"code": 200,        
+							"status": "success",        
+							"message": "Data User Berhasil Diubah"    
+						},    
+						"data": {        
+							"id": 10,        
+							"name": "Bagaspati",        
+							"email": "rakhab@gmail.com",        
+							"email_verified_at": null,        
+							"created_at": "2021-06-21T18:06:39.000000Z",        
+							"updated_at": "2021-06-22T07:42:58.000000Z"    
+						}
+					}"
+				}
+			]
+		}
+	]
+}
